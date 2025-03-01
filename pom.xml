@@ -55,6 +55,23 @@
 			<groupId>io.micrometer</groupId>
 			<artifactId>micrometer-tracing-bridge-otel</artifactId>
 		</dependency>
+
+		<!-- 
+			<dependency>
+           		<groupId>org.springframework.cloud</groupId>
+            	<artifactId>spring-cloud-starter-openfeign</artifactId>
+        	</dependency>
+		-->
+		
+		<!-- 
+
+		bellow dependency auto configuration FeignClientsConfiguration.MicrometerConfiguration gets activated and traces are propagated.
+		so that when service call other service through FeignClient it propagate trace, so trace id will be same among service in same request
+		<dependency>
+			<groupId>io.github.openfeign</groupId>
+			<artifactId>feign-micrometer</artifactId>
+		</dependency>
+		-->
 	</dependencies>
 
 	<build>
